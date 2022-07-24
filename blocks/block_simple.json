@@ -12,24 +12,24 @@
        "minecraft:destroy_time": 0.1, //Time Destroy
        "minecraft:block_light_emission": 0, //Light Emission
        "minecraft:block_light_filter": 1.0, //Light Filter
-       "minecraft:display_name": "block_simple", //Name of Block
-       "minecraft:creative_category": { //Category of Block
+       "minecraft:display_name": "block_simple", //Block Name
+       "minecraft:creative_category": { //Block Category
          "category": "construction", 
-         "group": "block" //Group  of Block
+         "group": "block" //Block Group
       },
        "minecraft:block_collision": {
-         "origin": [-8, 0, -8], "size": [16, 16, 16]
+         "origin": [-8, 0, -8], "size": [16, 16, 16] //Block Collision
       },
        "minecraft:aim_collision": {
-         "origin": [-8, 0, -8], "size": [16, 16, 16]
+         "origin": [-8, 0, -8], "size": [16, 16, 16] //Aim Collision
       },
-       "minecraft:geometry": "geometry.block_simple",
-       "minecraft:material_instances": {
+       "minecraft:geometry": "geometry.block_simple", //Block Geometry
+       "minecraft:material_instances": { //Block TExture
          "*": {
            "texture": "block_simple", "render_method": "alpha_test"
         }
       },
-       "minecraft:on_player_placing": {
+       "minecraft:on_player_placing": { //Event "asn:face"
          "event": "asn:face"
       }
     },
