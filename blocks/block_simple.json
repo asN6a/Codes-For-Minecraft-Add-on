@@ -8,7 +8,7 @@
       }
     },
      "components": {
-       "loot": "loot_tables/blocks/block_simple.json",
+       "loot": "loot_tables/blocks/block_simple.json", //Loot
        "minecraft:destroy_time": 0.1, //Time Destroy
        "minecraft:block_light_emission": 0, //Light Emission
        "minecraft:block_light_filter": 1.0, //Light Filter
