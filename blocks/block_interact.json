@@ -5,7 +5,7 @@
       "identifier": "asn:block_interact",
       "properties": {
         "asn:face": [0, 1, 2, 3],
-        "asn:interact": [true, false]
+        "asn:click": [true, false]
       }
     },
      "components": {
@@ -34,7 +34,7 @@
          "event": "asn:face"
       },
        "minecraft:on_interact": {
-         "event": "asn:interact "
+         "event": "asn:click"
       }
     },
      "permutations": [
@@ -55,7 +55,7 @@
           "components": { "minecraft:rotation": [0 , 90, 0] }
         },
        {
-         "condition": "q.block_property('asn:interact ') == true",
+         "condition": "q.block_property('asn:click') == true",
          "components": {
         }
       }
@@ -66,9 +66,9 @@
            "asn:face": "q.cardinal_facing_2d-2"
         }
       },
-       "asn:interact ": {
+       "asn:click": {
          "set_block_property": {
-           "asn:interact ": "!q.block_property('asn:interact')"
+           "asn:click": "!q.block_property('asn:click')"
         }
       }
     }
