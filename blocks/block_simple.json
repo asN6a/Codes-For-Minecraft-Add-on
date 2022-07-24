@@ -1,7 +1,7 @@
 {
   "format_version": "1.18.0",
   "minecraft:block": {
-    "description": ˋ{
+    "description": {
       "identifier": "asn:block_simple",
       "properties": {
         "asn:face": [0, 1, 2, 3]
@@ -9,13 +9,13 @@
     },
      "components": {
        "loot": "loot_tables/blocks/block_simple.json",
-       "minecraft:destroy_time": 0.1, //Time Destroy//
-       "minecraft:block_light_emission": 0, //Light Emission//
-       "minecraft:block_light_filter": 1.0, //Light Filter//
-       "minecraft:display_name": "block_simple", //Name of Block//
-       "minecraft:creative_category": { //Category of Block//
+       "minecraft:destroy_time": 0.1, //Time Destroy
+       "minecraft:block_light_emission": 0, //Light Emission
+       "minecraft:block_light_filter": 1.0, //Light Filter
+       "minecraft:display_name": "block_simple", //Name of Block
+       "minecraft:creative_category": { //Category of Block
          "category": "construction", 
-         "group": "block" //Group  of Block//
+         "group": "block" //Group  of Block
       },
        "minecraft:block_collision": {
          "origin": [-8, 0, -8], "size": [16, 16, 16]
@@ -37,7 +37,26 @@
        {
          "condition": "q.block_property('asn:face') == 0",
          "components": { "minecraft:rotation": [0, 180, 0] }
+        }
+       {
+         "condition": "q.block_property('asn:face') == 1",
+         "components": { "minecraft:rotation": [0, 0, 0] }
+        },
+       {
+          "condition": "q.block_property('asn:face') == 2",
+          "components": { "minecraft:rotation": [0, 270, 0] }
+        },
+       {
+          "condition": "q.block_property('asn:face') == 3",
+          "components": { "minecraft:rotation": [0 , 90, 0] }
       }
-    ] 
+    ],
+     "events": {
+       "asn:face": {
+         "set_block_property": {
+           "asn:face": "q.cardinal_facing_2d-2"
+        }
+      }
+    }
   }
 }
