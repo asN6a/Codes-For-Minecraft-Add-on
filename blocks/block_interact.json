@@ -41,20 +41,16 @@
        {
          "condition": "q.block_property('asn:face') == 0",
          "components": { "minecraft:rotation": [0, 180, 0] }
-        },
-       {
+        },{
          "condition": "q.block_property('asn:face') == 1",
          "components": { "minecraft:rotation": [0, 0, 0] }
-        },
-       {
+        },{
           "condition": "q.block_property('asn:face') == 2",
           "components": { "minecraft:rotation": [0, 270, 0] }
-        },
-       {
+        },{
           "condition": "q.block_property('asn:face') == 3",
           "components": { "minecraft:rotation": [0 , 90, 0] }
-        },
-       {
+        },{
          "condition": "q.block_property('asn:click') == true",
          "components": {
         }
