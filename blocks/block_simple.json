@@ -9,7 +9,35 @@
     },
      "components": {
        "loot": "loot_tables/blocks/block_simple.json",
-       "minecraft:block_filter_emission": 
-     }
+       "minecraft:destroy_time": 0.1, //Time Destroy//
+       "minecraft:block_light_emission": 0, //Light Emission//
+       "minecraft:block_light_filter": 1.0, //Light Filter//
+       "minecraft:display_name": "block_simple", //Name of Block//
+       "minecraft:creative_category": { //Category of Block//
+         "category": "construction", 
+         "group": "block" //Group  of Block//
+      },
+       "minecraft:block_collision": {
+         "origin": [-8, 0, -8], "size": [16, 16, 16]
+      },
+       "minecraft:aim_collision": {
+         "origin": [-8, 0, -8], "size": [16, 16, 16]
+      },
+       "minecraft:geometry": "geometry.block_simple",
+       "minecraft:material_instances": {
+         "*": {
+           "texture": "block_simple", "render_method": "alpha_test"
+        }
+      },
+       "minecraft:on_player_placing": {
+         "event": "asn:face"
+      }
+    },
+     "permutations": [
+       {
+         "condition": "q.block_property('asn:face') == 0",
+         "components": { "minecraft:rotation": [0, 180, 0] }
+      }
+    ] 
   }
 }
