@@ -5,7 +5,7 @@
       "identifier": "asn:block_interact",
       "properties": {
         "asn:face": [0, 1, 2, 3],
-        "asn:click": [true, false]
+        "asn:click": [false, true]
       }
     },
      "components": {
