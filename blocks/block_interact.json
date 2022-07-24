@@ -1,1 +1,76 @@
-
+{
+  "format_version": "1.18.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "asn:block_interact",
+      "properties": {
+        "asn:face": [0, 1, 2, 3],
+        "asn:interact": [true, false]
+      }
+    },
+     "components": {
+       "loot": "loot_tables/blocks/block_interact .json",
+       "minecraft:destroy_time": 0.1,
+       "minecraft:block_light_emission": 0,
+       "minecraft:block_light_filter": 1.0,
+       "minecraft:display_name": "block_interact ",
+       "minecraft:creative_category": {
+         "category": "construction", 
+         "group": "block"
+      },
+       "minecraft:block_collision": {
+         "origin": [-8, 0, -8], "size": [16, 16, 16]
+      },
+       "minecraft:aim_collision": {
+         "origin": [-8, 0, -8], "size": [16, 16, 16]
+      },
+       "minecraft:geometry": "geometry.block_interact ",
+       "minecraft:material_instances": {
+         "*": {
+           "texture": "block_interact ", "render_method": "alpha_test"
+        }
+      },
+       "minecraft:on_player_placing": {
+         "event": "asn:face"
+      },
+       "minecraft:on_interact": {
+         "event": "asn:interact "
+      }
+    },
+     "permutations": [
+       {
+         "condition": "q.block_property('asn:face') == 0",
+         "components": { "minecraft:rotation": [0, 180, 0] }
+        },
+       {
+         "condition": "q.block_property('asn:face') == 1",
+         "components": { "minecraft:rotation": [0, 0, 0] }
+        },
+       {
+          "condition": "q.block_property('asn:face') == 2",
+          "components": { "minecraft:rotation": [0, 270, 0] }
+        },
+       {
+          "condition": "q.block_property('asn:face') == 3",
+          "components": { "minecraft:rotation": [0 , 90, 0] }
+        },
+       {
+         "condition": "q.block_property('asn:interact ') == true",
+         "components": {
+        }
+      }
+    ],
+     "events": {
+       "asn:face": {
+         "set_block_property": {
+           "asn:face": "q.cardinal_facing_2d-2"
+        }
+      },
+       "asn:interact ": {
+         "set_block_property": {
+           "asn:interact ": "!q.block_property('asn:interact')"
+        }
+      }
+    }
+  }
+}
