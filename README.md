@@ -1,2 +1,4 @@
 # Blocks Code 
-Free use to modify. No Credits needed.
+Codes for free use. No Credits needed.
+
+By asN
